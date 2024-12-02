@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="2; url=../dash/index.html"> <!-- Redirección automática -->
+  <title>Bienvenida</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Fondo */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url(./bandera.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      font-family: 'Georgia', serif;
+      animation: backgroundGradient 2s infinite alternate ease-in-out;
+      overflow: hidden;
+    }
+
+    /* Animación del fondo */
+    @keyframes backgroundGradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+
+    /* Contenedor del mensaje */
+    .welcome-container {
+      position: relative;
+      padding: 50px 70px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 3px solid #ffd700;
+      border-radius: 25px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+      animation: fadeInScale 1.5s ease-out, fadeOutScale 0.8s 2.5s ease-in forwards;
+      max-width: 500px;
+      width: 90%;
+    }
+
+    /* Animación del contenedor */
+    @keyframes fadeInScale {
+      0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    @keyframes fadeOutScale {
+      0% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(0.9) translateY(30px);
+      }
+    }
+
+    /* Estilo del mensaje */
+    .welcome-message {
+      font-size: 36px;
+      color: #002855;
+      font-weight: bold;
+      line-height: 1.4;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+    }
+
+    /* Detalles adicionales (línea decorativa) */
+    .decorative-line {
+      height: 3px;
+      background: linear-gradient(90deg, #ffd700, #002855, #ffd700);
+      margin: 10px auto 0;
+      width: 50%;
+      border-radius: 5px;
+      animation: slideIn 1.5s ease-out;
+    }
+
+    @keyframes slideIn {
+      0% {
+        width: 0;
+        opacity: 0;
+      }
+      100% {
+        width: 50%;
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="welcome-container">
+    <p class="welcome-message">¡Bienvenido, Álvaro Figueredo!</p>
+    <div class="decorative-line"></div>
+  </div>
+</body>
+</html>
