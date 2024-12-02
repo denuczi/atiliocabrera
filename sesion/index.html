@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ingresar</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+
+    <div class="form-section">
+      <span class="logo"><i class="bi bi-book"></i></span>
+      <h2>Iniciar sesión</h2>
+      <span class="sub-heading">Accede a la información completa de tu cursada.</span>
+      
+      <form id="loginForm">
+        <label for="dni">DNI</label>
+        <input class="form-control" type="text" id="dni" name="dni" required />
+      
+        <label for="email">Correo</label>
+        <input class="form-control" type="email" id="email" name="email" required />
+      
+        <label for="password">Contraseña</label>
+        <input class="form-control" type="password" id="password" name="password" required />
+      
+        <button type="submit" class="btn-primary mt">Ingresar</button>
+      </form>
+      
+      <script>
+        // Captura el formulario
+        const form = document.getElementById('loginForm');
+      
+        // Escucha el evento 'submit' del formulario
+        form.addEventListener('submit', function (e) {
+          // Prevenir el comportamiento por defecto del formulario
+          e.preventDefault();
+      
+          // Capturar los valores de los campos
+          const dni = document.getElementById('dni').value;
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value;
+      
+          // Validar las credenciales
+          if (dni === '1234' && email === 'hola@prueba.com' && password === '1234') {
+            // Redirigir si las credenciales son correctas
+            window.location.href = '../dash/index.html';
+          } else {
+            // Mostrar mensaje de error si las credenciales son incorrectas
+            alert('Credenciales incorrectas. Por favor, verifica tu DNI, correo y contraseña.');
+          }
+        });
+      </script>
+      
+      <div class="footer-group">
+        <span>¿Aún no tienes tu usuario?<br> <a href="">Contáctanos</a></span>
+        <a href="">Olvidé mi contraseña</a>
+      </div>
+    </div>
+    <div class="hero-section">
+    </div>
+  </body>
+</html>
